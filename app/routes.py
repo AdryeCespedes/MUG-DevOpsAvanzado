@@ -19,6 +19,7 @@ def serve_image():
     storage_path = '/mnt/sa_mount'
     filename = 'img.png' # Hardcoded filename
     return send_from_directory(storage_path, filename)
+    
 
 def home():
     return render_template("index.html")
