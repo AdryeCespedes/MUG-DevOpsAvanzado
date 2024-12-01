@@ -17,11 +17,6 @@ on:
 env:
   IMAGE_NAME_main: mbwebapp-main
   IMAGE_NAME_dev: mbwebapp-dev
-
-jobs:
-env:
-  IMAGE_NAME_main: mbwebapp-main
-  IMAGE_NAME_dev: mbwebapp-dev
   TEST_AZURE_ENDPOINT: ${{ secrets.TEST_AZURE_ENDPOINT }}
   TEST_AZURE_CREDENTIALS: ${{ secrets.TEST_AZURE_CREDENTIALS }}
   TEST_ENDPOINT: ${{ vars.TEST_ENDPOINT }}
@@ -69,7 +64,7 @@ jobs:
 
       - name: Run Unit Tests
         run: pytest ./tests
-        
+
   build-main:
     name: Build-main
     runs-on: [ubuntu-latest]
